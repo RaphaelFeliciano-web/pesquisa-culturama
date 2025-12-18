@@ -1,11 +1,143 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
+	
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>PEsquisa Culturama</title>
+	<link rel="stylesheet" href="./src/css/style.css"> 
+		
+	<title>Formulário de Pesquisa Culturama</title>
+
 </head>
-<body>AAAA
-	AAA
+<body>
+	<form action="#" method="post">
+		<h1>Formulário de Pesquisa</h1>
+
+		<div>
+			<label for="userName">Nome:</label>
+			<input type="text" id="userName" name="userName" required>
+		</div>
+
+		<div>
+			<label for="age">Idade:</label>
+			<input type="number" id="age" name="age" required>
+		</div>
+
+		<div id="sexo">
+			<label>Sexo:</label>
+			<div class="radio-group">
+				<div>
+					<input type="radio" id="masculino" name="sexo" value="M" required>
+					<label for="masculino" style="font-weight: normal;">Masculino</label>
+				</div>
+				<div>
+					<input type="radio" id="feminino" name="sexo" value="F" required>
+					<label for="feminino" style="font-weight: normal;">Feminino</label>
+				</div>
+				<div>
+					<input type="radio" id="outro" name="sexo" value="O" required>
+					<label for="outro" style="font-weight: normal;">Outro</label>
+				</div>
+			</div>
+			<input type="text" id="outroSexo" name="outroSexo" style="display: none;" placeholder="Especifique">
+		</div>
+
+		<fieldset>
+			<legend>Qual é o seu principal interesse cultural?</legend>
+			<div class="checkbox-group">
+				<div>
+					<input type="checkbox" id="musica" name="interesse" value="musica">
+					<label for="musica" style="font-weight: normal;">Música</label>
+				</div>
+				<div>
+					<input type="checkbox" id="teatro" name="interesse" value="teatro">
+					<label for="teatro" style="font-weight: normal;">Teatro</label>
+				</div>
+				<div>
+					<input type="checkbox" id="cinema" name="interesse" value="cinema">
+					<label for="cinema" style="font-weight: normal;">Cinema</label>
+				</div>
+				<div>
+					<input type="checkbox" id="rock" name="interesse" value="rock">
+					<label for="rock" style="font-weight: normal;">Rock</label>
+				</div>
+				<div>
+					<input type="checkbox" id="reggae" name="interesse" value="reggae">
+					<label for="reggae" style="font-weight: normal;">Reggae</label>
+				</div>
+				<div>
+					<input type="checkbox" id="pop" name="interesse" value="pop">
+					<label for="pop" style="font-weight: normal;">Pop</label>
+				</div>
+				<div>
+					<input type="checkbox" id="funk" name="interesse" value="funk">
+					<label for="funk" style="font-weight: normal;">Funk</label>
+				</div>
+				<div>
+					<input type="checkbox" id="poprock" name="interesse" value="poprock">
+					<label for="poprock" style="font-weight: normal;">Pop Rock</label>
+				</div>
+				<div>
+					<input type="checkbox" id="literatura" name="interesse" value="literatura">
+					<label for="literatura" style="font-weight: normal;">Literatura</label>
+				</div>
+			</div>
+		</fieldset>
+
+		<div>
+			<label for="sugestoes">Sugestões para melhorar a Culturama:</label>
+			<textarea id="sugestoes" name="sugestoes" rows="4" cols="50"></textarea>
+		</div>
+
+		<div>
+			<label for="estado">Estado:</label>
+			<select id="estado" name="estado" required>
+				<option value="" disabled selected>Selecione o Estado</option>
+				<option value="AC">Acre - AC</option>
+				<option value="AL">Alagoas - AL</option>
+				<option value="AP">Amapá - AP</option>
+				<option value="AM">Amazonas - AM</option>
+				<option value="BA">Bahia - BA</option>
+				<option value="CE">Ceará - CE</option>
+				<option value="DF">Distrito Federal - DF</option>
+				<option value="ES">Espírito Santo - ES</option>
+				<option value="GO">Goiás - GO</option>
+				<option value="MA">Maranhão - MA</option>
+				<option value="MT">Mato Grosso - MT</option>
+				<option value="MS">Mato Grosso do Sul - MS</option>
+				<option value="MG">Minas Gerais - MG</option>
+				<option value="PA">Pará - PA</option>
+				<option value="PB">Paraíba - PB</option>
+				<option value="PR">Paraná - PR</option>
+				<option value="PE">Pernambuco - PE</option>
+				<option value="PI">Piauí - PI</option>
+				<option value="RJ">Rio de Janeiro - RJ</option>
+				<option value="RN">Rio Grande do Norte - RN</option>
+				<option value="RS">Rio Grande do Sul - RS</option>
+				<option value="RO">Rondônia - RO</option>
+				<option value="RR">Roraima - RR</option>
+				<option value="SC">Santa Catarina - SC</option>
+				<option value="SP">São Paulo - SP</option>
+				<option value="SE">Sergipe - SE</option>
+				<option value="TO">Tocantins - TO</option>
+			</select>
+		</div>
+
+		<input type="submit" value="Enviar">
+	</form>
+	<script>
+		document.querySelectorAll('input[name="sexo"]').forEach(radio => {
+			radio.addEventListener('change', function() {
+				if (this.value === 'O') {
+					document.getElementById('outroSexo').style.display = 'inline-block';
+					document.getElementById('outroSexo').style.marginTop = '1rem';
+				} else {
+					document.getElementById('outroSexo').style.display = 'none';
+				}
+			});
+		});
+	</script>
+
 </body>
 </html>
