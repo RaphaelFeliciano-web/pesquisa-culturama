@@ -6,9 +6,7 @@ Um formulário de pesquisa interativo desenvolvido como um projeto de estudo par
 
 Você pode testar o projeto em funcionamento no seguinte link:
 
-**[Clique aqui para ver o projeto online](https://seu-usuario.github.io/pesquisa-culturama/)**
-
-*(Lembre-se de substituir `seu-usuario` pelo seu nome de usuário do GitHub após fazer o deploy)*
+**[Clique aqui para ver o projeto online](https://raphaelfeliciano-web.github.io/pesquisa-culturama/)**
 
 ## ✨ Funcionalidades
 
