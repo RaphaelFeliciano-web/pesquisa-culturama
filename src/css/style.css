@@ -3,10 +3,11 @@ body {
 			background-color: #f0f2f5;
 			color: #333;
 			display: flex;
-			justify-content: center;
+			flex-direction: column;
 			align-items: center;
 			min-height: 100vh;
 			margin: 0;
+			padding: 2rem 0;
 		}
 		form {
 			background-color: #fff;
@@ -72,4 +73,18 @@ body {
 		}
 		input[type="submit"]:hover {
 			background-color: #1d3557;
+		}
+
+		/* Estilos para a área de resultados */
+		.results-container {
+			width: 100%;
+			max-width: 600px;
+			margin-top: 2rem;
+		}
+		.result-card {
+			background: white;
+			padding: 1.5rem;
+			border-radius: 8px;
+			box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+			margin-bottom: 1rem;
 		}
